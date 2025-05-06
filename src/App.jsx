@@ -1,19 +1,53 @@
+import { useState, useEffect } from 'react'
 export default function App() {
-  document.addEventListener('DOMContentLoaded', () => {
-    const appElement = document.querySelector('h1')
-    appElement.style.opacity = 0
-    appElement.style.transition = 'opacity 1s ease-in-out'
+  const [isVisible, setIsVisible] = useState(false)
 
-    setTimeout(() => {
-      appElement.style.opacity = 1
-    }, 100)
-  })
-
+  useEffect(() => {
+    setIsVisible(true)
+  }, [])
   return (
-    <div>
-      <h1 className="bg-red-400 py-4 text-center font-bold leading-5 text-2xl text-white shadow-md shadow-red-500/50">
-        Welcome to Filmpire
-      </h1>
-    </div>
+    <nav
+      className={`bg-gray-800 p-4 transition-opacity duration-1000 ${
+        isVisible ? 'opacity-100' : 'opacity-0'
+      }`}
+    >
+      <div className="flex items-center justify-between">
+        <div className="flex items-center">
+          <h1 className="text-white text-2xl font-bold animate-slideIn">
+            Filmpire
+          </h1>
+        </div>
+        <div className="flex space-x-4">
+          <a
+            href="/"
+            className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium animate-slideIn"
+            style={{ animationDelay: '0.1s' }}
+          >
+            Home
+          </a>
+          <a
+            href="/movies"
+            className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium animate-slideIn"
+            style={{ animationDelay: '0.2s' }}
+          >
+            Movies
+          </a>
+          <a
+            href="/categories"
+            className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium animate-slideIn"
+            style={{ animationDelay: '0.3s' }}
+          >
+            Categories
+          </a>
+          <a
+            href="/search"
+            className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium animate-slideIn"
+            style={{ animationDelay: '0.4s' }}
+          >
+            Search
+          </a>
+        </div>
+      </div>
+    </nav>
   )
 }
