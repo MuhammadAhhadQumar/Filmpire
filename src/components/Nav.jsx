@@ -17,7 +17,7 @@ export default function Nav() {
   const NavLink = ({ path, label }) => (
     <a
       href={path}
-      className="text-gray-700 hover:text-black px-4 py-2 text-sm font-medium transition-colors duration-200"
+      className="text-red-600 hover:text-red-800 px-4 py-2 text-sm font-medium transition-colors duration-200"
       aria-label={`Navigate to ${label}`}
     >
       {label}
@@ -27,14 +27,14 @@ export default function Nav() {
   return (
     <nav
       aria-label="Main Navigation"
-      className={`fixed top-0 left-0 w-full bg-white bg-opacity-90 backdrop-blur-md border-b border-gray-200 transition-all duration-500 ${
+      className={`fixed top-0 left-0 w-full bg-red-50 bg-opacity-90 backdrop-blur-md border-b border-red-200 transition-all duration-500 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-12'
       }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
         <div className="flex items-center">
           <h1
-            className="text-gray-900 text-xl font-semibold tracking-tight cursor-pointer"
+            className="text-red-900 text-xl font-semibold tracking-tight cursor-pointer"
             tabIndex="0"
             aria-label="Filmpire Logo"
           >
