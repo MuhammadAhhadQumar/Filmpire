@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { navLinks } from '../data/data'
 import NavLink from './utils/NavLink'
 
-export default function Nav() {
+const Nav = () => {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
@@ -35,3 +35,4 @@ export default function Nav() {
     </nav>
   )
 }
+export default Nav
