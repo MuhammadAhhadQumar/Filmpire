@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import { navLinks } from '../data/data'
+import NavLink from './utils/NavLink'
 
 export default function Nav() {
   const [isVisible, setIsVisible] = useState(false)
@@ -6,23 +8,6 @@ export default function Nav() {
   useEffect(() => {
     setIsVisible(true)
   }, [])
-
-  const navLinks = [
-    { path: '/', label: 'Home' },
-    { path: '/movies', label: 'Movies' },
-    { path: '/categories', label: 'Categories' },
-    { path: '/search', label: 'Search' }
-  ]
-
-  const NavLink = ({ path, label }) => (
-    <a
-      href={path}
-      className="text-red-600 hover:text-red-800 px-4 py-2 text-sm font-medium transition-colors duration-200"
-      aria-label={`Navigate to ${label}`}
-    >
-      {label}
-    </a>
-  )
 
   return (
     <nav
