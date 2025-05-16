@@ -3,15 +3,16 @@ import { makeStyles } from '@mui/styles'
 const useStyles = makeStyles(() => ({
   root: {
     display: 'flex',
-    height: '100vh'
+    height: '100%'
   },
   content: {
-    flexGrow: '1',
-    padding: '2em'
+    flexGrow: 1,
+    padding: '2em',
+    marginTop: '5em'
   },
   toolbar: {
-    height: '70px',
-    backgroundColor: '#f5f5f5'
+    height: '100%',
+    display: 'flex'
   }
 }))
 
