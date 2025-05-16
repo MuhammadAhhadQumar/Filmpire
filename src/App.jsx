@@ -11,7 +11,7 @@ const App = () => {
   return (
     <div>
       <CssBaseline />
-      <NavBar/>
+      <NavBar />
       <main>
         <Routes>
           <Route path="/" element={<Movies />} />
