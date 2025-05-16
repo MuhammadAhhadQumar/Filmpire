@@ -7,11 +7,10 @@ const useStyles = makeStyles(() => ({
   },
   content: {
     flexGrow: 1,
-    padding: '2em',
-    marginTop: '5em'
+    padding: '2em'
   },
   toolbar: {
-    height: '100%',
+    height: '70px',
     display: 'flex'
   }
 }))

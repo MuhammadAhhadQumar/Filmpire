@@ -15,14 +15,13 @@ const App = () => {
       <CssBaseline />
       <NavBar />
       <main className={classes.content}>
-        <div className={classes.toolbar}>
-          <Routes>
-            <Route path="/" element={<Movies />} />
-            <Route path="/movies/:id" element={<MoviesInformation />} />
-            <Route path="/actors/:id" element={<Actors />} />
-            <Route path="/profile/:id" element={<Profile />} />
-          </Routes>
-        </div>
+        <div className={classes.toolbar} />
+        <Routes>
+          <Route path="/" element={<Movies />} />
+          <Route path="/movies/:id" element={<MoviesInformation />} />
+          <Route path="/actors/:id" element={<Actors />} />
+          <Route path="/profile/:id" element={<Profile />} />
+        </Routes>
       </main>
     </div>
   )
