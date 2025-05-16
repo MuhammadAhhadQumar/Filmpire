@@ -1,9 +1,5 @@
-import useStyles from '../style'
-
 const Movies = () => {
-  const classes = useStyles()
-
-  return <div className={classes.container}>Movies </div>
+  return <div>Movies </div>
 }
 
 export default Movies
